@@ -18,7 +18,6 @@ public class VideoService {
 
 	public Video saveVideoRegister(Video video) {
 
-
 		return videoRepository.save(video);
 
 	}
@@ -37,5 +36,9 @@ public class VideoService {
 		else {
 			throw new VideoException("Invalid Register");
 		}
+	}
+	public void deleteSpecificRegister(Long id){
+		videoRepository.deleteById(id);
+	 
 	}
 }
