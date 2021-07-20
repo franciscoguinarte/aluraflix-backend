@@ -17,73 +17,59 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
 import br.com.aluraflix.model.Video;
-import br.com.aluraflix.repository.VideoRepository;
 import br.com.aluraflix.service.VideoService;
 
 @RestController
 @RequestMapping("/videos")
 public class AluraflixController {
 
- 
 	@Autowired
 	private VideoService videoService;
-	
-	
-	@Autowired
-	private VideoRepository videoRepository;
-	
+
 	@PostMapping
 	@ResponseStatus(HttpStatus.CREATED)
 	public Video registerVideo(@RequestBody Video video) {
-		
+
 		return videoService.saveVideoRegister(video);
 	}
-	 
-	
+
 	@GetMapping
 	public List<Video> showAllRegisters() {
 		return videoService.showAllVideoRegisters();
 	}
-	
+
 	@GetMapping("/{id}")
-	public Video showOneRegister(@PathVariable Long id) {
-		return videoService.showSpecificVideoRegister(id);
+	public ResponseEntity<Video> showOneRegister(@PathVariable Long id) {
+
+		Video res = videoService.findVideoById(id);
+		return ResponseEntity.ok(res);
 	}
 
 	@DeleteMapping("/{id}")
-	public ResponseEntity<Video> removeOneRegister(@PathVariable Long id){
-		
-		if(!videoRepository.existsById(id)) {
-			return ResponseEntity.notFound().build();
-			
-		}
+	public ResponseEntity<Video> removeOneRegister(@PathVariable Long id) {
+
+		videoService.findVideoById(id);
 		videoService.deleteSpecificRegister(id);
 		return ResponseEntity.noContent().build();
-		
+
 	}
-	
+
 	@PatchMapping("/{id}")
-	public ResponseEntity<Video> updatePartOfRegister(@PathVariable Long id , @RequestBody Video video){
-		if(!videoRepository.existsById(id)) {
-			return ResponseEntity.notFound().build();
-			
-		}
-		
+	public ResponseEntity<Video> updatePartOfRegister(@PathVariable Long id, @RequestBody Video video) {
+
+		videoService.findVideoById(id);
 		video.setId(id);
-		video= videoService.saveVideoRegister(video);
+		video = videoService.saveVideoRegister(video);
 		return ResponseEntity.ok(video);
 	}
-	
+
 	@PutMapping("/{id}")
-	public ResponseEntity<Video> updateRegister(@PathVariable Long id , @RequestBody Video video){
-		if(!videoRepository.existsById(id)) {
-			return ResponseEntity.notFound().build();
-			
-		}
-		
+	public ResponseEntity<Video> updateRegister(@PathVariable Long id, @RequestBody Video video) {
+
+		videoService.findVideoById(id);
 		video.setId(id);
-		video= videoService.saveVideoRegister(video);
+		video = videoService.saveVideoRegister(video);
 		return ResponseEntity.ok(video);
 	}
-	
+
 }

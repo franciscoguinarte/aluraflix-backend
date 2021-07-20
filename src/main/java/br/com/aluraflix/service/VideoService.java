@@ -4,9 +4,11 @@ import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.stereotype.Service;
 
 import br.com.aluraflix.exception.VideoException;
+import br.com.aluraflix.exception.VideoNotFoundException;
 import br.com.aluraflix.model.Video;
 import br.com.aluraflix.repository.VideoRepository;
 
@@ -26,16 +28,11 @@ public class VideoService {
 		return videoRepository.findAll();
 	}
 	
-	public Video showSpecificVideoRegister(Long id){
+	public Video findVideoById(Long id){	
+		return videoRepository.
+				findById(id).
+				orElseThrow(()-> new VideoNotFoundException("Video not found"));
 		
-		Optional<Video> res = videoRepository.findById(id);
-		
-		if(res.isPresent()) {
-			return res.get();
-		}
-		else {
-			throw new VideoException("Invalid Register");
-		}
 	}
 	public void deleteSpecificRegister(Long id){
 		videoRepository.deleteById(id);
