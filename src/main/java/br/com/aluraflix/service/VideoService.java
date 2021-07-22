@@ -3,10 +3,13 @@ package br.com.aluraflix.service;
 import java.util.List;
 import java.util.Optional;
 
+import javax.validation.ConstraintViolationException;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.stereotype.Service;
 
+import br.com.aluraflix.exception.BadRequestException;
 import br.com.aluraflix.exception.VideoException;
 import br.com.aluraflix.exception.VideoNotFoundException;
 import br.com.aluraflix.model.Video;
@@ -20,8 +23,13 @@ public class VideoService {
 
 	public Video saveVideoRegister(Video video) {
 
-		return videoRepository.save(video);
-
+		try {
+			videoRepository.save(video);
+		}
+		catch(ConstraintViolationException e) {
+			throw new BadRequestException(e.getMessage());
+		}
+		return video;
 	}
 
 	public List<Video> showAllVideoRegisters() {
