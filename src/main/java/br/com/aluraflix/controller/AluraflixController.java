@@ -2,6 +2,8 @@ package br.com.aluraflix.controller;
 
 import java.util.List;
 
+import javax.validation.Valid;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -55,7 +57,7 @@ public class AluraflixController {
 	}
 
 	@PatchMapping("/{id}")
-	public ResponseEntity<Video> updatePartOfRegister(@PathVariable Long id, @RequestBody Video video) {
+	public ResponseEntity<Video> updatePartOfRegister(@Valid @PathVariable Long id, @RequestBody Video video) {
 
 		videoService.findVideoById(id);
 		video.setId(id);
