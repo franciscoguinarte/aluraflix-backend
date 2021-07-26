@@ -23,7 +23,7 @@ import br.com.aluraflix.service.VideoService;
 
 @RestController
 @RequestMapping("/videos")
-public class AluraflixController {
+public class VideoController {
 
 	@Autowired
 	private VideoService videoService;
