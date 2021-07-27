@@ -8,7 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import br.com.aluraflix.exception.BadRequestException; 
-import br.com.aluraflix.exception.VideoNotFoundException;
+import br.com.aluraflix.exception.ResourceNotFoundException;
 import br.com.aluraflix.model.Video;
 import br.com.aluraflix.repository.VideoRepository;
 
@@ -19,7 +19,7 @@ public class VideoService {
 	private VideoRepository videoRepository;
 
 	public Video saveVideoRegister(Video video) {
-
+		 
 		try {
 			videoRepository.save(video);
 		}
@@ -36,7 +36,7 @@ public class VideoService {
 	public Video findVideoById(Long id){	
 		return videoRepository.
 				findById(id).
-				orElseThrow(()-> new VideoNotFoundException("Video not found"));
+				orElseThrow(()-> new ResourceNotFoundException("Video not found"));
 		
 	}
 	public void deleteSpecificRegister(Long id){

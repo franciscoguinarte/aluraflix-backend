@@ -13,8 +13,8 @@ import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExcep
 @ControllerAdvice
 public class APIExceptionHandler extends ResponseEntityExceptionHandler {
  	
-	@ExceptionHandler(VideoNotFoundException.class)
-	public ResponseEntity<Object> handleNegocio(VideoNotFoundException ex, WebRequest request) {
+	@ExceptionHandler(ResourceNotFoundException.class)
+	public ResponseEntity<Object> handleNegocio(ResourceNotFoundException ex, WebRequest request) {
 
 		var status = HttpStatus.NOT_FOUND;
 		var problem = new Problem();
