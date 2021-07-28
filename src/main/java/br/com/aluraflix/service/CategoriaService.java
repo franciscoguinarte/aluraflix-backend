@@ -31,11 +31,10 @@ public class CategoriaService {
 			return categoria;
 	}
 	 
-	 public ResponseEntity<?> showAllCategoriasRegisters() {
+	 public List<Categoria>  showAllCategoriasRegisters() {
 		 
-		 List<Categoria> res = categoriaRepository.findAll();
+		 return categoriaRepository.findAll();
 		 
-		 return ResponseEntity.ok(res);
 	 }
 	 
 	 public Categoria findCategoriaById(Long id) {
@@ -43,6 +42,21 @@ public class CategoriaService {
 		 return categoriaRepository.findById(id).orElseThrow(
 				 ()-> new ResourceNotFoundException("Categoria not found"));
 	 }
+	 
+	 public void deleteCategoria(Long id) {
+		 findCategoriaById(id);
+		 categoriaRepository.deleteById(id);
+	 }
+
+	public ResponseEntity<Categoria> updateCategoria(Long id, Categoria categoria) {
+		
+		categoria.setId(id);
+		
+		categoriaRepository.save(categoria);
+		Categoria res = findCategoriaById(id);
+		
+		return ResponseEntity.ok(res);
+	}
 	 
  
 	 

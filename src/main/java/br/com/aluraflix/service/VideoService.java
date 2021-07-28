@@ -7,7 +7,7 @@ import javax.validation.ConstraintViolationException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import br.com.aluraflix.exception.BadRequestException; 
+import br.com.aluraflix.exception.BadRequestException;
 import br.com.aluraflix.exception.ResourceNotFoundException;
 import br.com.aluraflix.model.Video;
 import br.com.aluraflix.repository.VideoRepository;
@@ -30,7 +30,8 @@ public class VideoService {
 	}
 
 	public List<Video> showAllVideoRegisters() {
-		return videoRepository.findAll();
+		return  videoRepository.findAll();
+		
 	}
 	
 	public Video findVideoById(Long id){	

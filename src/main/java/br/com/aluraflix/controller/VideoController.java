@@ -38,6 +38,7 @@ public class VideoController {
 	@GetMapping
 	public List<Video> showAllRegisters() {
 		return videoService.showAllVideoRegisters();
+		 
 	}
 
 	@GetMapping("/{id}")
