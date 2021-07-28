@@ -5,6 +5,7 @@ import java.util.List;
 import javax.validation.ConstraintViolationException;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 import br.com.aluraflix.exception.BadRequestException;
@@ -30,9 +31,11 @@ public class CategoriaService {
 			return categoria;
 	}
 	 
-	 public List<Categoria> showAllCategoriasRegisters() {
+	 public ResponseEntity<?> showAllCategoriasRegisters() {
 		 
-		 return categoriaRepository.findAll();
+		 List<Categoria> res = categoriaRepository.findAll();
+		 
+		 return ResponseEntity.ok(res);
 	 }
 	 
 	 public Categoria findCategoriaById(Long id) {
@@ -40,6 +43,8 @@ public class CategoriaService {
 		 return categoriaRepository.findById(id).orElseThrow(
 				 ()-> new ResourceNotFoundException("Categoria not found"));
 	 }
+	 
+ 
 	 
 	 
 	 

@@ -1,0 +1,2747 @@
+{
+	"info": {
+		"_postman_id": "54a649ca-60df-41b7-ba94-8801790dcaaf",
+		"name": "API Aluraflix v1.01",
+		"description": "API for Aluraflix services",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "videos",
+			"item": [
+				{
+					"name": "{id}",
+					"item": [
+						{
+							"name": "Operation for update register for aluraflix videos [Update register for complete]",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"id\": -27698771.28747976,\n    \"titulo\": \"in adi\",\n    \"descricao\": \"dolore laboris incididunt\",\n    \"url\": \"anim officia nisi Ut\"\n}"
+								},
+								"url": {
+									"raw": "{{baseUrl}}/videos/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"videos",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "consectetur aute proident officia",
+											"description": "(Required) Video id"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Invalid request.",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"id\": -27698771.28747976,\n    \"titulo\": \"in adi\",\n    \"descricao\": \"dolore laboris incididunt\",\n    \"url\": \"anim officia nisi Ut\"\n}"
+										},
+										"url": {
+											"raw": "{{baseUrl}}/videos/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"videos",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n \"id\": -27698771.28747976,\n \"titulo\": \"in adi\",\n \"descricao\": \"dolore laboris incididunt\",\n \"url\": \"anim officia nisi Ut\"\n}"
+								},
+								{
+									"name": "Invalid request. See the parameters on body",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"id\": -27698771.28747976,\n    \"titulo\": \"in adi\",\n    \"descricao\": \"dolore laboris incididunt\",\n    \"url\": \"anim officia nisi Ut\"\n}"
+										},
+										"url": {
+											"raw": "{{baseUrl}}/videos/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"videos",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n \"messagem\": \"commodo pariatur\"\n}"
+								},
+								{
+									"name": "Not authenticated.See the parameters on body",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"id\": -27698771.28747976,\n    \"titulo\": \"in adi\",\n    \"descricao\": \"dolore laboris incididunt\",\n    \"url\": \"anim officia nisi Ut\"\n}"
+										},
+										"url": {
+											"raw": "{{baseUrl}}/videos/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"videos",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n \"messagem\": \"commodo pariatur\"\n}"
+								},
+								{
+									"name": "Not authorizated",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"id\": -27698771.28747976,\n    \"titulo\": \"in adi\",\n    \"descricao\": \"dolore laboris incididunt\",\n    \"url\": \"anim officia nisi Ut\"\n}"
+										},
+										"url": {
+											"raw": "{{baseUrl}}/videos/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"videos",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "Forbidden",
+									"code": 403,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n \"messagem\": \"commodo pariatur\"\n}"
+								},
+								{
+									"name": "Backend error for process request",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"id\": -27698771.28747976,\n    \"titulo\": \"in adi\",\n    \"descricao\": \"dolore laboris incididunt\",\n    \"url\": \"anim officia nisi Ut\"\n}"
+										},
+										"url": {
+											"raw": "{{baseUrl}}/videos/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"videos",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "Internal Server Error",
+									"code": 500,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n \"messagem\": \"commodo pariatur\"\n}"
+								},
+								{
+									"name": "Request timeout",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"id\": -27698771.28747976,\n    \"titulo\": \"in adi\",\n    \"descricao\": \"dolore laboris incididunt\",\n    \"url\": \"anim officia nisi Ut\"\n}"
+										},
+										"url": {
+											"raw": "{{baseUrl}}/videos/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"videos",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "Bad Gateway",
+									"code": 502,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n \"messagem\": \"commodo pariatur\"\n}"
+								}
+							]
+						},
+						{
+							"name": "Operation for update register for aluraflix videos [Update part of a register]",
+							"request": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"id\": -27698771.28747976,\n    \"titulo\": \"in adi\",\n    \"descricao\": \"dolore laboris incididunt\",\n    \"url\": \"anim officia nisi Ut\"\n}"
+								},
+								"url": {
+									"raw": "{{baseUrl}}/videos/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"videos",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "consectetur aute proident officia",
+											"description": "(Required) Video id"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Invalid request.",
+									"originalRequest": {
+										"method": "PATCH",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"id\": -27698771.28747976,\n    \"titulo\": \"in adi\",\n    \"descricao\": \"dolore laboris incididunt\",\n    \"url\": \"anim officia nisi Ut\"\n}"
+										},
+										"url": {
+											"raw": "{{baseUrl}}/videos/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"videos",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n \"id\": -27698771.28747976,\n \"titulo\": \"in adi\",\n \"descricao\": \"dolore laboris incididunt\",\n \"url\": \"anim officia nisi Ut\"\n}"
+								},
+								{
+									"name": "Invalid request. See the parameters on body",
+									"originalRequest": {
+										"method": "PATCH",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"id\": -27698771.28747976,\n    \"titulo\": \"in adi\",\n    \"descricao\": \"dolore laboris incididunt\",\n    \"url\": \"anim officia nisi Ut\"\n}"
+										},
+										"url": {
+											"raw": "{{baseUrl}}/videos/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"videos",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n \"messagem\": \"commodo pariatur\"\n}"
+								},
+								{
+									"name": "Not authenticated.See the parameters on body",
+									"originalRequest": {
+										"method": "PATCH",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"id\": -27698771.28747976,\n    \"titulo\": \"in adi\",\n    \"descricao\": \"dolore laboris incididunt\",\n    \"url\": \"anim officia nisi Ut\"\n}"
+										},
+										"url": {
+											"raw": "{{baseUrl}}/videos/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"videos",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n \"messagem\": \"commodo pariatur\"\n}"
+								},
+								{
+									"name": "Not authorizated",
+									"originalRequest": {
+										"method": "PATCH",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"id\": -27698771.28747976,\n    \"titulo\": \"in adi\",\n    \"descricao\": \"dolore laboris incididunt\",\n    \"url\": \"anim officia nisi Ut\"\n}"
+										},
+										"url": {
+											"raw": "{{baseUrl}}/videos/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"videos",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "Forbidden",
+									"code": 403,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n \"messagem\": \"commodo pariatur\"\n}"
+								},
+								{
+									"name": "Backend error for process request",
+									"originalRequest": {
+										"method": "PATCH",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"id\": -27698771.28747976,\n    \"titulo\": \"in adi\",\n    \"descricao\": \"dolore laboris incididunt\",\n    \"url\": \"anim officia nisi Ut\"\n}"
+										},
+										"url": {
+											"raw": "{{baseUrl}}/videos/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"videos",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "Internal Server Error",
+									"code": 500,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n \"messagem\": \"commodo pariatur\"\n}"
+								},
+								{
+									"name": "Request timeout",
+									"originalRequest": {
+										"method": "PATCH",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"id\": -27698771.28747976,\n    \"titulo\": \"in adi\",\n    \"descricao\": \"dolore laboris incididunt\",\n    \"url\": \"anim officia nisi Ut\"\n}"
+										},
+										"url": {
+											"raw": "{{baseUrl}}/videos/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"videos",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "Bad Gateway",
+									"code": 502,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n \"messagem\": \"commodo pariatur\"\n}"
+								}
+							]
+						},
+						{
+							"name": "Operation for view a specific register for aluraflix videos",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/videos/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"videos",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "consectetur aute proident officia",
+											"description": "(Required) Video id"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Invalid request.",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/videos/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"videos",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n \"id\": -27698771.28747976,\n \"titulo\": \"in adi\",\n \"descricao\": \"dolore laboris incididunt\",\n \"url\": \"anim officia nisi Ut\"\n}"
+								},
+								{
+									"name": "Invalid request. See the parameters on body",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/videos/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"videos",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n \"messagem\": \"commodo pariatur\"\n}"
+								},
+								{
+									"name": "Not authenticated.See the parameters on body",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/videos/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"videos",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n \"messagem\": \"commodo pariatur\"\n}"
+								},
+								{
+									"name": "Not authorizated",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/videos/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"videos",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "Forbidden",
+									"code": 403,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n \"messagem\": \"commodo pariatur\"\n}"
+								},
+								{
+									"name": "Backend error for process request",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/videos/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"videos",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "Internal Server Error",
+									"code": 500,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n \"messagem\": \"commodo pariatur\"\n}"
+								},
+								{
+									"name": "Request timeout",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/videos/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"videos",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "Bad Gateway",
+									"code": 502,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n \"messagem\": \"commodo pariatur\"\n}"
+								}
+							]
+						},
+						{
+							"name": "Operation for delete a specific register for aluraflix videos",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/videos/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"videos",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "consectetur aute proident officia",
+											"description": "(Required) Video id"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Invalid request.",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/videos/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"videos",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "No Content",
+									"code": 204,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n \"id\": -27698771.28747976,\n \"titulo\": \"in adi\",\n \"descricao\": \"dolore laboris incididunt\",\n \"url\": \"anim officia nisi Ut\"\n}"
+								},
+								{
+									"name": "Invalid request. See the parameters on body",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/videos/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"videos",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n \"messagem\": \"commodo pariatur\"\n}"
+								},
+								{
+									"name": "Not authenticated.See the parameters on body",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/videos/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"videos",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n \"messagem\": \"commodo pariatur\"\n}"
+								},
+								{
+									"name": "Not authorizated",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/videos/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"videos",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "Forbidden",
+									"code": 403,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n \"messagem\": \"commodo pariatur\"\n}"
+								},
+								{
+									"name": "Backend error for process request",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/videos/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"videos",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "Internal Server Error",
+									"code": 500,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n \"messagem\": \"commodo pariatur\"\n}"
+								},
+								{
+									"name": "Request timeout",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/videos/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"videos",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "Bad Gateway",
+									"code": 502,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n \"messagem\": \"commodo pariatur\"\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Operation for create register for aluraflix videos",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"titulo\": \"ex anim eu\",\n    \"descricao\": \"ad Ut esse\",\n    \"url\": \"in consectetur ad Ut\"\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/videos",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"videos"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Invalid request.",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"titulo\": \"ex anim eu\",\n    \"descricao\": \"ad Ut esse\",\n    \"url\": \"in consectetur ad Ut\"\n}"
+								},
+								"url": {
+									"raw": "{{baseUrl}}/videos",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"videos"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n \"titulo\": \"ex anim eu\",\n \"descricao\": \"ad Ut esse\",\n \"url\": \"in consectetur ad Ut\"\n}"
+						},
+						{
+							"name": "Invalid request. See the parameters on body",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"titulo\": \"ex anim eu\",\n    \"descricao\": \"ad Ut esse\",\n    \"url\": \"in consectetur ad Ut\"\n}"
+								},
+								"url": {
+									"raw": "{{baseUrl}}/videos",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"videos"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n \"messagem\": \"commodo pariatur\"\n}"
+						},
+						{
+							"name": "Not authenticated.See the parameters on body",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"titulo\": \"ex anim eu\",\n    \"descricao\": \"ad Ut esse\",\n    \"url\": \"in consectetur ad Ut\"\n}"
+								},
+								"url": {
+									"raw": "{{baseUrl}}/videos",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"videos"
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n \"messagem\": \"commodo pariatur\"\n}"
+						},
+						{
+							"name": "Not authorizated",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"titulo\": \"ex anim eu\",\n    \"descricao\": \"ad Ut esse\",\n    \"url\": \"in consectetur ad Ut\"\n}"
+								},
+								"url": {
+									"raw": "{{baseUrl}}/videos",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"videos"
+									]
+								}
+							},
+							"status": "Forbidden",
+							"code": 403,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n \"messagem\": \"commodo pariatur\"\n}"
+						},
+						{
+							"name": "Backend error for process request",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"titulo\": \"ex anim eu\",\n    \"descricao\": \"ad Ut esse\",\n    \"url\": \"in consectetur ad Ut\"\n}"
+								},
+								"url": {
+									"raw": "{{baseUrl}}/videos",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"videos"
+									]
+								}
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n \"messagem\": \"commodo pariatur\"\n}"
+						},
+						{
+							"name": "Request timeout",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"titulo\": \"ex anim eu\",\n    \"descricao\": \"ad Ut esse\",\n    \"url\": \"in consectetur ad Ut\"\n}"
+								},
+								"url": {
+									"raw": "{{baseUrl}}/videos",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"videos"
+									]
+								}
+							},
+							"status": "Bad Gateway",
+							"code": 502,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n \"messagem\": \"commodo pariatur\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Operation for view all registers for aluraflix videos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/videos",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"videos"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success.",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/videos",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"videos"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "[\n {\n  \"id\": -80871557.64665365,\n  \"titulo\": \"exercitation esse mollit ea\",\n  \"descricao\": \"in aliqua ad veniam cupidatat\",\n  \"url\": \"commodo proident\"\n },\n {\n  \"id\": -10542878.323702976,\n  \"titulo\": \"et voluptate sed\",\n  \"descricao\": \"ex amet\",\n  \"url\": \"deserunt ad dolore\"\n }\n]"
+						},
+						{
+							"name": "Invalid request. See the parameters on body",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/videos",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"videos"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n \"messagem\": \"commodo pariatur\"\n}"
+						},
+						{
+							"name": "Not authenticated.See the parameters on body",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/videos",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"videos"
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n \"messagem\": \"commodo pariatur\"\n}"
+						},
+						{
+							"name": "Not authorizated",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/videos",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"videos"
+									]
+								}
+							},
+							"status": "Forbidden",
+							"code": 403,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n \"messagem\": \"commodo pariatur\"\n}"
+						},
+						{
+							"name": "Backend error for process request",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/videos",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"videos"
+									]
+								}
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n \"messagem\": \"commodo pariatur\"\n}"
+						},
+						{
+							"name": "Request timeout",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/videos",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"videos"
+									]
+								}
+							},
+							"status": "Bad Gateway",
+							"code": 502,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n \"messagem\": \"commodo pariatur\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "categorias",
+			"item": [
+				{
+					"name": "{id}",
+					"item": [
+						{
+							"name": "Operation for update register for aluraflix categorias [Update register for complete]",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"titulo\": \"irure officia sint veniam\",\n    \"cor\": \"incididunt esse\"\n}"
+								},
+								"url": {
+									"raw": "{{baseUrl}}/categorias/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"categorias",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "consectetur aute proident officia",
+											"description": "(Required) Video id"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Invalid request.",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"titulo\": \"irure officia sint veniam\",\n    \"cor\": \"incididunt esse\"\n}"
+										},
+										"url": {
+											"raw": "{{baseUrl}}/categorias/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"categorias",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n \"titulo\": \"irure officia sint veniam\",\n \"cor\": \"incididunt esse\"\n}"
+								},
+								{
+									"name": "Invalid request. See the parameters on body",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"titulo\": \"irure officia sint veniam\",\n    \"cor\": \"incididunt esse\"\n}"
+										},
+										"url": {
+											"raw": "{{baseUrl}}/categorias/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"categorias",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n \"messagem\": \"commodo pariatur\"\n}"
+								},
+								{
+									"name": "Not authenticated.See the parameters on body",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"titulo\": \"irure officia sint veniam\",\n    \"cor\": \"incididunt esse\"\n}"
+										},
+										"url": {
+											"raw": "{{baseUrl}}/categorias/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"categorias",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n \"messagem\": \"commodo pariatur\"\n}"
+								},
+								{
+									"name": "Not authorizated",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"titulo\": \"irure officia sint veniam\",\n    \"cor\": \"incididunt esse\"\n}"
+										},
+										"url": {
+											"raw": "{{baseUrl}}/categorias/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"categorias",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "Forbidden",
+									"code": 403,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n \"messagem\": \"commodo pariatur\"\n}"
+								},
+								{
+									"name": "Backend error for process request",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"titulo\": \"irure officia sint veniam\",\n    \"cor\": \"incididunt esse\"\n}"
+										},
+										"url": {
+											"raw": "{{baseUrl}}/categorias/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"categorias",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "Internal Server Error",
+									"code": 500,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n \"messagem\": \"commodo pariatur\"\n}"
+								},
+								{
+									"name": "Request timeout",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"titulo\": \"irure officia sint veniam\",\n    \"cor\": \"incididunt esse\"\n}"
+										},
+										"url": {
+											"raw": "{{baseUrl}}/categorias/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"categorias",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "Bad Gateway",
+									"code": 502,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n \"messagem\": \"commodo pariatur\"\n}"
+								}
+							]
+						},
+						{
+							"name": "Operation for update register for aluraflix Categorias [Update part of a register]",
+							"request": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"id\": -24987792.12411128,\n    \"titulo\": \"officia esse incididunt\",\n    \"cor\": \"incididunt irure sunt\"\n}"
+								},
+								"url": {
+									"raw": "{{baseUrl}}/categorias/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"categorias",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "consectetur aute proident officia",
+											"description": "(Required) Video id"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Invalid request.",
+									"originalRequest": {
+										"method": "PATCH",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"id\": -24987792.12411128,\n    \"titulo\": \"officia esse incididunt\",\n    \"cor\": \"incididunt irure sunt\"\n}"
+										},
+										"url": {
+											"raw": "{{baseUrl}}/categorias/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"categorias",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n \"id\": -24987792.12411128,\n \"titulo\": \"officia esse incididunt\",\n \"cor\": \"incididunt irure sunt\"\n}"
+								},
+								{
+									"name": "Invalid request. See the parameters on body",
+									"originalRequest": {
+										"method": "PATCH",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"id\": -24987792.12411128,\n    \"titulo\": \"officia esse incididunt\",\n    \"cor\": \"incididunt irure sunt\"\n}"
+										},
+										"url": {
+											"raw": "{{baseUrl}}/categorias/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"categorias",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n \"messagem\": \"commodo pariatur\"\n}"
+								},
+								{
+									"name": "Not authenticated.See the parameters on body",
+									"originalRequest": {
+										"method": "PATCH",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"id\": -24987792.12411128,\n    \"titulo\": \"officia esse incididunt\",\n    \"cor\": \"incididunt irure sunt\"\n}"
+										},
+										"url": {
+											"raw": "{{baseUrl}}/categorias/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"categorias",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n \"messagem\": \"commodo pariatur\"\n}"
+								},
+								{
+									"name": "Not authorizated",
+									"originalRequest": {
+										"method": "PATCH",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"id\": -24987792.12411128,\n    \"titulo\": \"officia esse incididunt\",\n    \"cor\": \"incididunt irure sunt\"\n}"
+										},
+										"url": {
+											"raw": "{{baseUrl}}/categorias/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"categorias",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "Forbidden",
+									"code": 403,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n \"messagem\": \"commodo pariatur\"\n}"
+								},
+								{
+									"name": "Backend error for process request",
+									"originalRequest": {
+										"method": "PATCH",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"id\": -24987792.12411128,\n    \"titulo\": \"officia esse incididunt\",\n    \"cor\": \"incididunt irure sunt\"\n}"
+										},
+										"url": {
+											"raw": "{{baseUrl}}/categorias/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"categorias",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "Internal Server Error",
+									"code": 500,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n \"messagem\": \"commodo pariatur\"\n}"
+								},
+								{
+									"name": "Request timeout",
+									"originalRequest": {
+										"method": "PATCH",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"id\": -24987792.12411128,\n    \"titulo\": \"officia esse incididunt\",\n    \"cor\": \"incididunt irure sunt\"\n}"
+										},
+										"url": {
+											"raw": "{{baseUrl}}/categorias/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"categorias",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "Bad Gateway",
+									"code": 502,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n \"messagem\": \"commodo pariatur\"\n}"
+								}
+							]
+						},
+						{
+							"name": "Operation for view a specific register for aluraflix Categorias",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/categorias/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"categorias",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "consectetur aute proident officia",
+											"description": "(Required) Video id"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Invalid request.",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/categorias/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"categorias",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n \"id\": -24987792.12411128,\n \"titulo\": \"officia esse incididunt\",\n \"cor\": \"incididunt irure sunt\"\n}"
+								},
+								{
+									"name": "Invalid request. See the parameters on body",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/categorias/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"categorias",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n \"messagem\": \"commodo pariatur\"\n}"
+								},
+								{
+									"name": "Not authenticated.See the parameters on body",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/categorias/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"categorias",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n \"messagem\": \"commodo pariatur\"\n}"
+								},
+								{
+									"name": "Not authorizated",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/categorias/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"categorias",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "Forbidden",
+									"code": 403,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n \"messagem\": \"commodo pariatur\"\n}"
+								},
+								{
+									"name": "Backend error for process request",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/categorias/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"categorias",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "Internal Server Error",
+									"code": 500,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n \"messagem\": \"commodo pariatur\"\n}"
+								},
+								{
+									"name": "Request timeout",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/categorias/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"categorias",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "Bad Gateway",
+									"code": 502,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n \"messagem\": \"commodo pariatur\"\n}"
+								}
+							]
+						},
+						{
+							"name": "Operation for delete a specific register for aluraflix categorias",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/categorias/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"categorias",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "consectetur aute proident officia",
+											"description": "(Required) Video id"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Invalid request.",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/categorias/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"categorias",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "No Content",
+									"code": 204,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n \"id\": -24987792.12411128,\n \"titulo\": \"officia esse incididunt\",\n \"cor\": \"incididunt irure sunt\"\n}"
+								},
+								{
+									"name": "Invalid request. See the parameters on body",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/categorias/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"categorias",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n \"messagem\": \"commodo pariatur\"\n}"
+								},
+								{
+									"name": "Not authenticated.See the parameters on body",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/categorias/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"categorias",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n \"messagem\": \"commodo pariatur\"\n}"
+								},
+								{
+									"name": "Not authorizated",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/categorias/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"categorias",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "Forbidden",
+									"code": 403,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n \"messagem\": \"commodo pariatur\"\n}"
+								},
+								{
+									"name": "Backend error for process request",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/categorias/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"categorias",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "Internal Server Error",
+									"code": 500,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n \"messagem\": \"commodo pariatur\"\n}"
+								},
+								{
+									"name": "Request timeout",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/categorias/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"categorias",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "Bad Gateway",
+									"code": 502,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n \"messagem\": \"commodo pariatur\"\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Operation for create register for aluraflix categorias",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"titulo\": \"irure officia sint veniam\",\n    \"cor\": \"incididunt esse\"\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/categorias",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"categorias"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Invalid request.",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"titulo\": \"irure officia sint veniam\",\n    \"cor\": \"incididunt esse\"\n}"
+								},
+								"url": {
+									"raw": "{{baseUrl}}/categorias",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"categorias"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n \"titulo\": \"ex anim eu\",\n \"descricao\": \"ad Ut esse\",\n \"url\": \"in consectetur ad Ut\"\n}"
+						},
+						{
+							"name": "Invalid request. See the parameters on body",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"titulo\": \"irure officia sint veniam\",\n    \"cor\": \"incididunt esse\"\n}"
+								},
+								"url": {
+									"raw": "{{baseUrl}}/categorias",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"categorias"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n \"messagem\": \"commodo pariatur\"\n}"
+						},
+						{
+							"name": "Not authenticated.See the parameters on body",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"titulo\": \"irure officia sint veniam\",\n    \"cor\": \"incididunt esse\"\n}"
+								},
+								"url": {
+									"raw": "{{baseUrl}}/categorias",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"categorias"
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n \"messagem\": \"commodo pariatur\"\n}"
+						},
+						{
+							"name": "Not authorizated",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"titulo\": \"irure officia sint veniam\",\n    \"cor\": \"incididunt esse\"\n}"
+								},
+								"url": {
+									"raw": "{{baseUrl}}/categorias",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"categorias"
+									]
+								}
+							},
+							"status": "Forbidden",
+							"code": 403,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n \"messagem\": \"commodo pariatur\"\n}"
+						},
+						{
+							"name": "Backend error for process request",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"titulo\": \"irure officia sint veniam\",\n    \"cor\": \"incididunt esse\"\n}"
+								},
+								"url": {
+									"raw": "{{baseUrl}}/categorias",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"categorias"
+									]
+								}
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n \"messagem\": \"commodo pariatur\"\n}"
+						},
+						{
+							"name": "Request timeout",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"titulo\": \"irure officia sint veniam\",\n    \"cor\": \"incididunt esse\"\n}"
+								},
+								"url": {
+									"raw": "{{baseUrl}}/categorias",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"categorias"
+									]
+								}
+							},
+							"status": "Bad Gateway",
+							"code": 502,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n \"messagem\": \"commodo pariatur\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Operation for view all registers for aluraflix videos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/categorias",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"categorias"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success.",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/categorias",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"categorias"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "[\n {\n  \"id\": 65198747.728642106,\n  \"titulo\": \"quis mollit commodo consectetur\",\n  \"cor\": \"ut reprehender\"\n },\n {\n  \"id\": -73737738.04305288,\n  \"titulo\": \"occaecat sed Ut\",\n  \"cor\": \"irure\"\n }\n]"
+						},
+						{
+							"name": "Invalid request. See the parameters on body",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/categorias",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"categorias"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n \"messagem\": \"commodo pariatur\"\n}"
+						},
+						{
+							"name": "Not authenticated.See the parameters on body",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/categorias",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"categorias"
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n \"messagem\": \"commodo pariatur\"\n}"
+						},
+						{
+							"name": "Not authorizated",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/categorias",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"categorias"
+									]
+								}
+							},
+							"status": "Forbidden",
+							"code": 403,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n \"messagem\": \"commodo pariatur\"\n}"
+						},
+						{
+							"name": "Backend error for process request",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/categorias",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"categorias"
+									]
+								}
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n \"messagem\": \"commodo pariatur\"\n}"
+						},
+						{
+							"name": "Request timeout",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/categorias",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"categorias"
+									]
+								}
+							},
+							"status": "Bad Gateway",
+							"code": 502,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n \"messagem\": \"commodo pariatur\"\n}"
+						}
+					]
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "http://localhost:8080/",
+			"type": "string"
+		}
+	]
+}
