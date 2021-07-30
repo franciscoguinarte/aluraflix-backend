@@ -21,6 +21,10 @@ public class VideoService {
 	public Video saveVideoRegister(Video video) {
 		 
 		try {
+			Long categoria_id = video.getCategoria_id();
+			if(categoria_id == null) {
+				video.setCategoria_id(1L);
+			}
 			videoRepository.save(video);
 		}
 		catch(ConstraintViolationException e) {

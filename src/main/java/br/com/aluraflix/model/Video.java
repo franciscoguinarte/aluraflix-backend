@@ -1,5 +1,6 @@
 package br.com.aluraflix.model;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -22,7 +23,7 @@ public class Video {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
  
- 
+	@Column(columnDefinition = "bigint default 1")
 	private Long categoria_id;
  
 	@NotBlank
